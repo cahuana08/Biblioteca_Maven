@@ -1,0 +1,46 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Pruebas TestNg"  parallel="methods" thread-count="3">
+    <test name="Progama Biblioteca">
+        <classes>
+            <class name="org.example.LibroTest">
+                <methods>
+                    <include name="testObtenerTituloLibro"/>
+                    <include name="testObtenerAutorLibro"/>
+                    <include name="testObtenerAnioPublicacionLibro"/>
+                </methods>
+            </class>
+            <class name="org.example.LibroDigitalTest">
+                <methods>
+                    <include name="testLibroDigitalSinTamanoTest"/>
+                    <include name="testObtenerTituloLibroDigital"/>
+                </methods>
+            </class>
+            <class name="org.example.SeccionTest">
+            <methods>
+                <include name="eliminaLibroTest">
+                    <parameter name="nombreSeccion" value="Aventuras"/>
+                    <parameter name="titulo" value="Bryan Cuchilla"/>
+                    <parameter name="autor" value="XXXX"/>
+                    <parameter name="anioPublicacion" value="2024"/>
+                    <parameter name="id" value="9"/>
+                </include>
+                <include name="testObtenerListaLibros"/>
+            </methods>
+            </class>
+            <class name="org.example.BibliotecaTest">
+                <methods>
+                    <include name="testObtenerNombreBiblioteca"/>
+                </methods>
+            </class>
+            <class name="org.example.LibroFisicoTest">
+                <methods>
+                    <include name="testObtenerNumeroPaginas"/>
+                    <include name="testObtenerTituloLibroFisico"/>
+                </methods>
+            </class>
+    </classes>
+    </test>
+
+</suite>
+
