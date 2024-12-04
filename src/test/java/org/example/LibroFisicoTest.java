@@ -18,12 +18,20 @@ public class LibroFisicoTest {
 
             Assert.assertEquals(NumeroPaginasActual,NumeroPaginasEsperado);
         }
-
+    @Test
     public void testObtenerTituloLibroFisico() {
         LibroFisico libroFisico = new LibroFisico("Primer Libro de Fisica", "Carlos Fisio", 1999, "5",2000);
 
         String tituloEsperado = "Primer Libro Digital";
         String tituloActual = libroFisico.getTitulo();
+        Assert.assertEquals(tituloActual, tituloEsperado);
+    }
+    @Test
+    public void testObtenerAutorLibroFisico() {
+        LibroFisico libroFisico = new LibroFisico("Primer Libro de Fisica", "Carlos Fisio", 1999, "5",2000);
+
+        String tituloEsperado = "Carlos Fisico";
+        String tituloActual = libroFisico.getAutor();
         Assert.assertEquals(tituloActual, tituloEsperado);
     }
     }
